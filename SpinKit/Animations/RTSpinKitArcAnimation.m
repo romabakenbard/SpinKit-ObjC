@@ -41,7 +41,7 @@
     arc.cornerRadius = CGRectGetWidth(arc.frame) / 2.0;
 
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathAddArc(path, NULL, center.x, center.y, radius, 0.0, ((M_PI * 2.0) / 360.0) * 300.0, NO);
+    CGPathAddArc(path, NULL, center.x, center.y, radius, 0.0, ((M_PI * 2.0) / 360.0) * 180.0, NO);
 
     CAShapeLayer *mask = [CAShapeLayer layer];
     mask.frame        = CGRectMake(0.0, 0.0, size.width, size.height);
@@ -59,7 +59,7 @@
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
     anim.removedOnCompletion = NO;
     anim.repeatCount = HUGE_VALF;
-    anim.duration = 0.8;
+    anim.duration = 0.5;
     anim.beginTime = beginTime;
     anim.keyTimes = @[@(0.0), @(0.5), @(1.0)];
 
